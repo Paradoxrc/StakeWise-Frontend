@@ -1,9 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
     <div>
-      Hello Botcalm
+      <Navbar />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
