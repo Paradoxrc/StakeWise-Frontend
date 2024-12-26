@@ -5,6 +5,7 @@ import Upcoming from "./pages/Upcoming/Upcoming";
 import Results from "./pages/Results/Results";
 import Politics from "./pages/Politics/Politics";
 import Sports from "./pages/Sports/Sports";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/result" element={<Results />} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }
