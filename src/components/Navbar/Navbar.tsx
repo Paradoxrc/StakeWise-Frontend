@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,28 +11,39 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="text-xl font-bold">STAKEWISE</div>
-          <img
-            src={logo} // Using the imported logo
-            alt="Logo"
-            className="ml-2 h-8" // Adjust height as needed
-          />
+          <Link to="/">
+            <div className="text-xl font-bold">STAKEWISE</div>
+            <img
+              src={logo} // Using the imported logo
+              alt="Logo"
+              className="ml-2 h-8" // Adjust height as needed
+            />
+          </Link>
         </div>
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          <a href="#" className="hover:text-secondary flex items-center">
+          <Link
+            to="/politics"
+            className="hover:text-secondary flex items-center"
+          >
             <i className="fas fa-landmark mr-2"></i> Politics
-          </a>
-          <a href="#" className="hover:text-secondary flex items-center">
+          </Link>
+          <Link to="/sports" className="hover:text-secondary flex items-center">
             <i className="fas fa-basketball-ball mr-2"></i> Sports
-          </a>
-          <a href="#" className="hover:text-secondary flex items-center">
+          </Link>
+          <Link
+            to="/upcoming"
+            className="hover:text-secondary flex items-center"
+          >
             <i className="fas fa-calendar-alt mr-2"></i> Upcoming Events
-          </a>
-          <a href="#" className="hover:text-secondary flex items-center">
+          </Link>
+          <Link
+            to="/results"
+            className="hover:text-secondary flex items-center"
+          >
             <i className="fas fa-chart-line mr-2"></i> Results
-          </a>
+          </Link>
         </div>
 
         {/* Login and Sign Up Buttons */}
