@@ -3,10 +3,12 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa6";
+import { TbWorld } from "react-icons/tb";
 import footer01 from "@/assets/images/footer01.png";
 import footer02 from "@/assets/images/footer02.png";
 import footer03 from "@/assets/images/footer03.png";
-import { TbWorld } from "react-icons/tb";
+import {Link} from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -30,9 +32,9 @@ const Footer = () => {
           </div>
           <div>
             <h2 className="text-white font-bold mb-4">Resources</h2>
-            <ul className="space-y-2">
-              <li>Contact</li>
-              <li>Results</li>
+            <ul className="flex flex-col space-y-2">
+               <Link to="/contactus">Contact Us</Link>
+               <Link to="/results">Results</Link>
             </ul>
           </div>
           <div>

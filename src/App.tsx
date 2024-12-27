@@ -6,21 +6,23 @@ import Results from "./pages/Results/Results";
 import Politics from "./pages/Politics/Politics";
 import Sports from "./pages/Sports/Sports";
 import Footer from "./components/Footer/Footer";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 function App() {
   return (
     <div>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/politics" element={<Politics />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/upcoming" element={<Upcoming />} />
-          <Route path="/result" element={<Results />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer/>
     </div>
   );
 }
