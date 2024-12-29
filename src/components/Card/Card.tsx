@@ -1,4 +1,4 @@
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaStar, FaRegStar } from "react-icons/fa"; // Import star icons
 import { ButtonOutline } from "../Buttons/Buttons";
 import { CardData } from "../../data/data"; // Adjust the path to your data file if needed
 import { useState } from "react";
@@ -7,18 +7,43 @@ const Card = () => {
   // State to control how many cards are shown
   const [showMore, setShowMore] = useState(false);
 
+  // State to track "interested" status for each card
+  const [interestedCards, setInterestedCards] = useState<number[]>([]);
+
+  // Toggle interested state for a card
+  const toggleInterested = (index: number) => {
+    setInterestedCards(
+      (prev) =>
+        prev.includes(index)
+          ? prev.filter((cardIndex) => cardIndex !== index) // Remove from interested
+          : [...prev, index] // Add to interested
+    );
+  };
+
   // Show only the first 16 cards or all based on showMore state
   const displayedCards = showMore ? CardData : CardData.slice(0, 16);
 
   return (
     <div className="px-4 lg:px-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-4 -mx-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-4">
         {/* Display cards */}
         {displayedCards.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between h-full max-w-[350px] p-3 rounded-lg bg-card shadow-md text-accent mx-1"
+            className="flex flex-col justify-between h-full max-w-[350px] p-3 rounded-lg bg-card shadow-md text-accent relative"
           >
+            {/* Interested Star */}
+            <div
+              className="absolute top-3 right-3 cursor-pointer text-xl"
+              onClick={() => toggleInterested(index)}
+            >
+              {interestedCards.includes(index) ? (
+                <FaStar className="text-yellow-400" /> // Filled star
+              ) : (
+                <FaRegStar className="text-gray-400" /> // Outlined star
+              )}
+            </div>
+
             {/* Header Section */}
             <div className="flex items-center">
               <img
