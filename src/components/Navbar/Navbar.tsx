@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-8" />
           <Link to="/" className="text-accent font-saira-stencil text-[30px]">
-            STAKEWISE
+            STAKEWISEEE
           </Link>
         </div>
 
