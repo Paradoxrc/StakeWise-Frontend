@@ -13,6 +13,7 @@ function App() {
     <div>
       <Router>
         <Navbar />
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/politics" element={<Politics />} />

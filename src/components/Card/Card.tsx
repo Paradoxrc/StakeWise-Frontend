@@ -1,46 +1,103 @@
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaStar, FaRegStar } from "react-icons/fa"; // Import star icons
+import { ButtonOutline } from "../Buttons/Buttons";
+import { CardData } from "../../data/data"; // Adjust the path to your data file if needed
+import { useState } from "react";
 
 const Card = () => {
+  // State to control how many cards are shown
+  const [showMore, setShowMore] = useState(false);
+
+  // State to track "interested" status for each card
+  const [interestedCards, setInterestedCards] = useState<number[]>([]);
+
+  // Toggle interested state for a card
+  const toggleInterested = (index: number) => {
+    setInterestedCards(
+      (prev) =>
+        prev.includes(index)
+          ? prev.filter((cardIndex) => cardIndex !== index) // Remove from interested
+          : [...prev, index] // Add to interested
+    );
+  };
+
+  // Show only the first 16 cards or all based on showMore state
+  const displayedCards = showMore ? CardData : CardData.slice(0, 16);
+
   return (
-    <div className="max-w-md mx-auto p-4 rounded-lg bg-card shadow-md text-accent">
-      {/* Header Section */}
-      <div className="flex items-center">
-        <img
-          src="https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862"
-          alt="Thumbnail"
-          className="w-10 h-10 rounded-full mr-3"
-        />
-        <h3 className="text-lg font-semibold text-accent">
-          Trump ends Ukraine war by first 90 days?
-        </h3>
-      </div>
-      <p className="mt-2 text-sm text-gray-400">$11.3m Vol.</p>
+    <div className="px-4 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-4">
+        {/* Display cards */}
+        {displayedCards.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-between h-full max-w-[350px] p-3 rounded-lg bg-card shadow-md text-accent relative"
+          >
+            {/* Interested Star */}
+            <div
+              className="absolute top-3 right-3 cursor-pointer text-xl"
+              onClick={() => toggleInterested(index)}
+            >
+              {interestedCards.includes(index) ? (
+                <FaStar className="text-yellow-400" /> // Filled star
+              ) : (
+                <FaRegStar className="text-gray-400" /> // Outlined star
+              )}
+            </div>
 
-      {/* Buttons Section */}
-      <div className="flex justify-between items-center mt-4">
-        {/* Buy Yes */}
-        <button className="flex items-center justify-center w-[45%] px-3 py-2 text-sm font-semibold text-white bg-green rounded-lg hover:bg-green-600">
-          Buy Yes
-          <FaArrowUp className="ml-2" />
-        </button>
-        {/* Buy No */}
-        <button className="flex items-center justify-center w-[45%] px-3 py-2 text-sm font-semibold text-white bg-red rounded-lg hover:bg-red-700">
-          Buy No
-          <FaArrowUp className="ml-2" />
-        </button>
+            {/* Header Section */}
+            <div className="flex items-center">
+              <img
+                src={item.image}
+                alt="Thumbnail"
+                className="w-8 h-8 rounded-full mr-3"
+              />
+              <h3 className="text-sm font-semibold text-accent line-clamp-2">
+                {item.title}
+              </h3>
+            </div>
+            <p className="mt-2 text-xs text-gray-400">$11.3m Vol.</p>
+
+            {/* Buttons Section */}
+            <div className="flex justify-between items-center mt-4">
+              {/* Buy Yes */}
+              <ButtonOutline className="flex items-center justify-center w-[45%] px-2 py-1 text-xs font-semibold text-green border-green hover:bg-green hover:text-white rounded-lg">
+                Buy Yes
+                <FaArrowUp className="ml-2" />
+              </ButtonOutline>
+
+              {/* Buy No */}
+              <ButtonOutline className="flex items-center justify-center w-[45%] px-2 py-1 text-xs font-semibold text-red border-red hover:bg-red hover:text-white rounded-lg">
+                Buy No
+                <FaArrowUp className="ml-2" />
+              </ButtonOutline>
+            </div>
+
+            {/* Spread Section */}
+            <div className="flex items-center mt-4">
+              <div className="flex-1 flex items-center">
+                <div className="h-1 w-[73%] bg-green rounded-l-full"></div>
+                <div className="h-1 w-[27%] bg-red rounded-r-full"></div>
+              </div>
+              <div className="flex items-center gap-4 ml-4">
+                <span className="text-green text-xs">73% Yes</span>
+                <span className="text-red text-xs">26% No</span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Spread Section */}
-      <div className="flex items-center mt-4">
-        <div className="flex-1 flex items-center">
-          <div className="h-1 w-[73%] bg-green rounded-l-full"></div>
-          <div className="h-1 w-[27%] bg-red rounded-r-full"></div>
+      {/* Show More / Show Less Button */}
+      {CardData.length > 16 && (
+        <div className="flex justify-center mt-6">
+          <ButtonOutline
+            onClick={() => setShowMore(!showMore)}
+            className="flex items-center px-4 py-2 bg-secondary text-white rounded-md text-sm font-semibold"
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </ButtonOutline>
         </div>
-        <div className="flex items-center gap-4 ml-4">
-          <span className="text-green text-xs">73% Yes</span>
-          <span className="text-red text-xs">26% No</span>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
