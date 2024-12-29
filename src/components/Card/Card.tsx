@@ -1,4 +1,5 @@
 import { FaArrowUp } from "react-icons/fa";
+import { ButtonOutline } from "../Buttons/Buttons";
 
 const Card = () => {
   return (
@@ -19,15 +20,16 @@ const Card = () => {
       {/* Buttons Section */}
       <div className="flex justify-between items-center mt-4">
         {/* Buy Yes */}
-        <button className="flex items-center justify-center w-[45%] px-3 py-2 text-sm font-semibold text-white bg-green rounded-lg hover:bg-green-600">
+        <ButtonOutline className="flex items-center justify-center w-[45%] px-3 py-2 text-sm font-semibold text-green border-green hover:bg-green hover:text-white rounded-lg">
           Buy Yes
           <FaArrowUp className="ml-2" />
-        </button>
+        </ButtonOutline>
+
         {/* Buy No */}
-        <button className="flex items-center justify-center w-[45%] px-3 py-2 text-sm font-semibold text-white bg-red rounded-lg hover:bg-red-700">
+        <ButtonOutline className="flex items-center justify-center w-[45%] px-3 py-2 text-sm font-semibold text-red border-red hover:bg-red hover:text-white rounded-lg">
           Buy No
           <FaArrowUp className="ml-2" />
-        </button>
+        </ButtonOutline>
       </div>
 
       {/* Spread Section */}
