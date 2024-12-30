@@ -139,3 +139,16 @@ export const SliderImages = [
     description: "Some representative placeholder content for the third slide.",
   },
 ];
+
+export const BettingPanelData = [
+  {
+    title: "Max Verstappen",
+    imageUrl: "https://via.placeholder.com/150",
+    options: [
+      { option: "Yes", value: 96.4 },
+      { option: "No", value: 4.2 },
+    ],
+    balance: 0,
+    minBet: 5,
+  },
+];
