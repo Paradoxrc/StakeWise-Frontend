@@ -1,116 +1,139 @@
 export const CardData = [
   {
     title: "Dinith WEdijiofdsjio",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "Trump ends Ukraine war by first 90 days?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "dsla;d;kl;ska;lkda?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaddddddddddddsasdasd",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "Trump ends Ukraine war by first 90 days?",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "dsla;d;kl;ska;lkda?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaddddddddddddsasdasd",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "Trump ends Ukraine war by first 90 days?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "dsla;d;kl;ska;lkda?",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaddddddddddddsasdasd",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "Trump ends Ukraine war by first 90 days?",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "dsla;d;kl;ska;lkda?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaddddddddddddsasdasd",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "Trump ends Ukraine war by first 90 days?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "dsla;d;kl;ska;lkda?",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "aaaaaaaddddddddddddsasdasd",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "Trump ends Ukraine war by first 90 days?",
+    category: "Sports",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
   {
     title: "dsla;d;kl;ska;lkda?",
+    category: "Politics",
     image:
       "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
   },
@@ -137,5 +160,18 @@ export const SliderImages = [
       "https://img.freepik.com/free-vector/green-banner-with-diagonal-stripes-pattern_1017-28370.jpg?t=st=1735459016~exp=1735462616~hmac=f9fdaf054d24aa6c02d9a6b671e503453b68fe81b1af7d67b477ecbb1d61821e&w=1380",
     label: "Third slide label",
     description: "Some representative placeholder content for the third slide.",
+  },
+];
+
+export const BettingPanelData = [
+  {
+    title: "Max Verstappen",
+    imageUrl: "https://via.placeholder.com/150",
+    options: [
+      { option: "Yes", value: 96.4 },
+      { option: "No", value: 4.2 },
+    ],
+    balance: 0,
+    minBet: 5,
   },
 ];

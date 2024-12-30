@@ -32,8 +32,8 @@ const BarComponent = () => {
       {/* Category Tabs */}
       {[
         "New",
-        "La Liga",
-        "Trump Presidency",
+        "Sports",
+        "Politics",
         "Breaking News",
         "Europa League",
         "Trump Cabinet",
