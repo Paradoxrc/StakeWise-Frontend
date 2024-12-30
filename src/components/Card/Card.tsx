@@ -104,6 +104,7 @@ const Card = () => {
   const [showMore, setShowMore] = useState(false);
   const [interestedCards, setInterestedCards] = useState<number[]>([]);
   const [showBettingPanel, setShowBettingPanel] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const toggleInterested = (index: number) => {
     setInterestedCards((prev) =>
@@ -113,7 +114,12 @@ const Card = () => {
     );
   };
 
-  const displayedCards = showMore ? CardData : CardData.slice(0, 16);
+  const filteredCards =
+    selectedCategory === "All"
+      ? CardData
+      : CardData.filter((card) => card.category === selectedCategory);
+
+  const displayedCards = showMore ? filteredCards : filteredCards.slice(0, 16);
 
   return (
     <div className="relative">
@@ -122,6 +128,24 @@ const Card = () => {
       )}
 
       <div className="px-4 lg:px-16">
+        {/* Filter Tabs */}
+        <div className="flex justify-center mb-4 space-x-4">
+          {["All", "Sports", "Politics"].map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all ${
+                selectedCategory === category
+                  ? "bg-secondary text-white"
+                  : "bg-primary text-sub hover:bg-secondary hover:text-white"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
           {displayedCards.map((item, index) => (
             <div
@@ -181,7 +205,7 @@ const Card = () => {
           ))}
         </div>
 
-        {CardData.length > 16 && (
+        {filteredCards.length > 16 && (
           <div className="flex justify-center mt-6">
             <ButtonOutline
               onClick={() => setShowMore(!showMore)}
