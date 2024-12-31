@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFire } from "react-icons/fa";
+import { FaFire, FaSearch } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 
 const BarComponent = () => {
@@ -7,7 +7,6 @@ const BarComponent = () => {
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
-    // You can add logic here to filter or search based on the `searchQuery`
     console.log("Search Query:", event.target.value);
   };
 
@@ -18,8 +17,9 @@ const BarComponent = () => {
         <FaFire className="mr-1" /> Top
       </button>
 
-      {/* Search Bar */}
+      {/* Search Bar with Icon */}
       <div className="flex items-center flex-grow max-w-md px-3 py-2 bg-gray-800 rounded-md border border-gray-600">
+        <FaSearch className="text-accent mr-2" />
         <input
           type="text"
           placeholder="Search by market"

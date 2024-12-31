@@ -3,10 +3,10 @@ import { SliderImages } from "../../data/data";
 
 export default function CarouselDynamicVariant(): JSX.Element {
   return (
-    <div className="relative mx-auto mt-10 max-w-full rounded-lg bg-white shadow-lg sm:w-full md:w-[90%] lg:w-[80%] xl:w-[1340px]">
+    <div className="relative mx-auto mt-1 max-w-full rounded-lg bg-white shadow-lg sm:w-full md:w-[90%] lg:w-[80%] xl:w-[1340px]">
       <TECarousel
-        showControls
-        showIndicators
+        showControls={true}
+        showIndicators={true}
         ride="carousel"
         prevBtnIcon={
           <span className="inline-block text-black h-8 w-8 [&>svg]:h-8">
