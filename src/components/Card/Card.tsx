@@ -1,6 +1,14 @@
 import { useState } from "react";
 import React from "react";
-import { FaPlus, FaMinus, FaArrowUp, FaStar, FaRegStar } from "react-icons/fa";
+import {
+  FaPlus,
+  FaMinus,
+  FaArrowUp,
+  FaStar,
+  FaRegStar,
+  FaChevronUp,
+  FaChevronDown,
+} from "react-icons/fa";
 import { ButtonOutline } from "../Buttons/Buttons";
 import { CardData } from "../../data/data";
 
@@ -128,8 +136,7 @@ const Card = () => {
       )}
 
       <div className="px-4 lg:px-16">
-        {/* Filter Tabs */}
-        <div className="flex justify-center mb-4 space-x-4">
+        {/* <div className="flex justify-center mb-4 space-x-4">
           {["All", "Sports", "Politics"].map((category) => (
             <button
               key={category}
@@ -143,14 +150,14 @@ const Card = () => {
               {category}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
           {displayedCards.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between h-full max-w-[350px] p-3 rounded-lg bg-card shadow-md text-accent relative transition-transform transform hover:scale-105 hover:shadow-lg duration-300"
+              className="flex flex-col justify-between max-h-100 max-w-[350px] p-3 pb-7 rounded-lg bg-card shadow-md text-accent relative transition-transform transform hover:scale-105 hover:shadow-lg duration-300"
               onClick={() => setShowBettingPanel(true)}
             >
               <div
@@ -180,25 +187,36 @@ const Card = () => {
               <p className="mt-2 text-xs text-gray-400">$11.3m Vol.</p>
 
               <div className="flex justify-between items-center mt-4">
-                <ButtonOutline className="flex items-center justify-center w-[45%] px-2 py-1 text-xs font-semibold text-green border-green hover:bg-green hover:text-white rounded-lg">
+                <ButtonOutline className="flex items-center justify-center w-[45%] px-2 py-1 text-xs font-semibold text-green border-green/50 bg-green/30 hover:bg-green hover:text-white rounded-lg transition-all">
                   Buy Yes
-                  <FaArrowUp className="ml-2" />
+                  <div className="flex flex-col ml-2">
+                    <FaChevronUp />
+                    <FaChevronUp className="-mt-2" />
+                  </div>
                 </ButtonOutline>
 
-                <ButtonOutline className="flex items-center justify-center w-[45%] px-2 py-1 text-xs font-semibold text-red border-red hover:bg-red hover:text-white rounded-lg">
+                <ButtonOutline className="flex items-center justify-center w-[45%] px-2 py-1 text-xs font-semibold text-red border-red/50 bg-red/30 hover:bg-red hover:text-white rounded-lg transition-all">
                   Buy No
-                  <FaArrowUp className="ml-2" />
+                  <div className="flex flex-col ml-2">
+                    <FaChevronDown />
+                    <FaChevronDown className="-mt-2" />
+                  </div>
                 </ButtonOutline>
               </div>
 
               <div className="flex items-center mt-4">
-                <div className="flex-1 flex items-center">
+                <div className="flex-1 flex items-center relative">
                   <div className="h-1 w-[73%] bg-green rounded-l-full"></div>
                   <div className="h-1 w-[27%] bg-red rounded-r-full"></div>
-                </div>
-                <div className="flex items-center gap-4 ml-4">
-                  <span className="text-green text-xs">73% Yes</span>
-                  <span className="text-red text-xs">26% No</span>
+
+                  {/* Green text under the green line */}
+                  <span className="absolute bottom-[-20px] left-0 text-green text-xs">
+                    73% Yes
+                  </span>
+                  {/* Red text under the red line */}
+                  <span className="absolute bottom-[-20px] right-0 text-red text-xs">
+                    26% No
+                  </span>
                 </div>
               </div>
             </div>
@@ -209,7 +227,7 @@ const Card = () => {
           <div className="flex justify-center mt-6">
             <ButtonOutline
               onClick={() => setShowMore(!showMore)}
-              className="flex items-center px-4 py-2 bg-secondary text-white rounded-md text-sm font-semibold"
+              className="flex items-center px-4 py-2 bg-secondary text-white rounded-md text-sm  border-0"
             >
               {showMore ? "Show Less" : "Show More"}
             </ButtonOutline>

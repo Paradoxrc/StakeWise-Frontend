@@ -73,16 +73,18 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           {isLoggedIn ? (
             <>
-              <div className="flex flex-col items-center text-accent font-bold">
+              <div className="flex flex-col items-center text-sub font-normal">
+                <div className="text-green">$0.00</div>
                 <div>Cash</div>
-                <div>$0.00</div>
               </div>
+
               <button
-                className="bg-secondary text-white px-4 py-2 rounded-lg"
+                className="text-sub bg-transparent border border-secondary py-1 px-6 rounded-full hover:text-white hover:bg-secondary transition-all duration-300"
                 onClick={() => alert("Deposit clicked!")}
               >
                 Deposit
               </button>
+
               <button
                 className="relative text-accent text-2xl hover:text-secondary transition-all duration-300"
                 onClick={() => setNotificationPanelOpen(!notificationPanelOpen)}
@@ -149,13 +151,14 @@ const Navbar = () => {
             <>
               <ButtonOutline
                 onClick={handleLogin}
-                className="text-sub border border-secondary hover:text-secondary hover:bg-transparent transition-all duration-300"
+                className="text-sub border border-secondary hover:text-white hover:bg-secondary transition-all duration-300 py-0.5 px-6 rounded-full"
               >
                 Login
               </ButtonOutline>
+
               <ButtonOutline
                 onClick={() => navigate("/signup")}
-                className="text-sub bg-transparent border border-secondary px-4 py-2 rounded-lg hover:text-secondary hover:bg-transparent transition-all duration-300"
+                className="text-sub bg-transparent border border-secondary py-0.5 px-6 rounded-full hover:text-white hover:bg-secondary transition-all duration-300"
               >
                 Sign Up
               </ButtonOutline>
@@ -188,7 +191,7 @@ const Navbar = () => {
               {isLoggedIn ? (
                 <button
                   onClick={handleLogout}
-                  className="block w-full text-left px-4 py-2 text-accent hover:bg-secondary hover:text-white transition-all duration-300"
+                  className="px-6 py-2 rounded-full bg-orange-500 text-white hover:bg-orange-600 transition-all duration-300"
                 >
                   Logout
                 </button>
@@ -196,13 +199,13 @@ const Navbar = () => {
                 <>
                   <Link
                     to="/signup"
-                    className="block px-4 py-2 text-accent hover:bg-secondary hover:text-white transition-all duration-300"
+                    className="px-6 py-2 rounded-full bg-orange-500 text-white hover:bg-orange-600 transition-all duration-300"
                   >
                     Sign Up
                   </Link>
                   <button
                     onClick={handleLogin}
-                    className="block w-full text-left px-4 py-2 text-accent hover:bg-secondary hover:text-white transition-all duration-300"
+                    className="px-6 py-2 rounded-full bg-orange-500 text-white hover:bg-orange-600 transition-all duration-300"
                   >
                     Login
                   </button>

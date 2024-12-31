@@ -7,8 +7,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#1C1C27", // for dark background
-        secondary: "#FFA500", // dark mode secondary color
-        sub:"#b1b2b3",
+        secondary: "#E27625", // dark mode secondary color
+        sub:"#8488AC",
         DFprimary: "#FFFFFF", // Light mode primary font color
         DFsecondary: "#8488AC", // Light mode secondary font color
         LFprimary: "#000000", // Dark mode primary font color

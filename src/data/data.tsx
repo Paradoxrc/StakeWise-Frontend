@@ -1,155 +1,117 @@
 export const CardData = [
   {
-    title: "Dinith WEdijiofdsjio",
+    title: "Global Leaders Convene for Climate Summit",
     category: "Politics",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
   },
   {
-    title: "Trump ends Ukraine war by first 90 days?",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "Breakthrough in Cancer Research Offers Hope",
+    category: "Health",
+    image: "https://th.bing.com/th/id/OIG3.80EN2JPNx7kp5VqoB5kz",
   },
   {
-    title: "dsla;d;kl;ska;lkda?",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "Top 10 Destinations for Adventure Travelers in 2025",
+    category: "Travel",
+    image: "https://pixlr.com/images/generator/how-to-generate.webp",
   },
   {
-    title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    title: "World Cup Finals: A Historic Night for Football Fans",
     category: "Sports",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://thumbs.dreamstime.com/b/image-shows-human-brain-glowing-network-connections-divided-two-hemispheres-left-right-hemisphere-325133493.jpg",
   },
   {
-    title: "aaaaaaaddddddddddddsasdasd",
-    category: "Sports",
+    title: "New AI Tools Transform How We Work and Learn",
+    category: "Technology",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
   },
   {
-    title: "Trump ends Ukraine war by first 90 days?",
-    category: "Sports",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
-  },
-  {
-    title: "dsla;d;kl;ska;lkda?",
+    title: "Breaking: Peace Agreement Reached in Conflict Zone",
     category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    image: "https://th.bing.com/th/id/OIG3.80EN2JPNx7kp5VqoB5kz",
   },
   {
-    title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
-  },
-  {
-    title: "aaaaaaaddddddddddddsasdasd",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
-  },
-  {
-    title: "Trump ends Ukraine war by first 90 days?",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
-  },
-  {
-    title: "dsla;d;kl;ska;lkda?",
+    title: "Olympic Highlights: The Stars of This Year's Games",
     category: "Sports",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    image: "https://pixlr.com/images/generator/how-to-generate.webp",
   },
   {
-    title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    category: "Sports",
+    title: "Top Recipes to Master Your Home Cooking Skills",
+    category: "Lifestyle",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://thumbs.dreamstime.com/b/image-shows-human-brain-glowing-network-connections-divided-two-hemispheres-left-right-hemisphere-325133493.jpg",
   },
   {
-    title: "aaaaaaaddddddddddddsasdasd",
-    category: "Sports",
+    title: "The Rise of Electric Vehicles: A Sustainable Future",
+    category: "Technology",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
   },
   {
-    title: "Trump ends Ukraine war by first 90 days?",
-    category: "Sports",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "Exploring the Mysteries of the Deep Ocean",
+    category: "Science",
+    image: "https://th.bing.com/th/id/OIG3.80EN2JPNx7kp5VqoB5kz",
   },
   {
-    title: "dsla;d;kl;ska;lkda?",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "Rising Stars in Hollywood: Who to Watch in 2025",
+    category: "Entertainment",
+    image: "https://pixlr.com/images/generator/how-to-generate.webp",
   },
   {
-    title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    category: "Politics",
+    title: "How Meditation is Changing Mental Health Treatment",
+    category: "Health",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://thumbs.dreamstime.com/b/image-shows-human-brain-glowing-network-connections-divided-two-hemispheres-left-right-hemisphere-325133493.jpg",
   },
   {
-    title: "aaaaaaaddddddddddddsasdasd",
-    category: "Politics",
+    title: "Stock Market Trends to Watch in the Coming Year",
+    category: "Finance",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
   },
   {
-    title: "Trump ends Ukraine war by first 90 days?",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "How Virtual Reality is Revolutionizing Gaming",
+    category: "Technology",
+    image: "https://th.bing.com/th/id/OIG3.80EN2JPNx7kp5VqoB5kz",
   },
   {
-    title: "dsla;d;kl;ska;lkda?",
-    category: "Sports",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "The Most Anticipated Books of the Year",
+    category: "Lifestyle",
+    image: "https://pixlr.com/images/generator/how-to-generate.webp",
   },
   {
-    title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    category: "Sports",
+    title: "Mars Mission: Astronauts Prepare for Launch",
+    category: "Science",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://thumbs.dreamstime.com/b/image-shows-human-brain-glowing-network-connections-divided-two-hemispheres-left-right-hemisphere-325133493.jpg",
   },
   {
-    title: "aaaaaaaddddddddddddsasdasd",
-    category: "Sports",
+    title: "How 5G Technology is Changing Global Connectivity",
+    category: "Technology",
     image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+      "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
   },
   {
-    title: "Trump ends Ukraine war by first 90 days?",
-    category: "Sports",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
-  },
-  {
-    title: "dsla;d;kl;ska;lkda?",
-    category: "Politics",
-    image:
-      "https://live-production.wcms.abc-cdn.net.au/dd746d4a947d50c1b2121aca27de39bd?impolicy=wcms_crop_resize&cropH=576&cropW=576&xPos=224&yPos=0&width=862&height=862",
+    title: "Street Art That’s Changing How We See Our Cities",
+    category: "Art",
+    image: "https://th.bing.com/th/id/OIG3.80EN2JPNx7kp5VqoB5kz",
   },
 ];
+
 export const SliderImages = [
   {
     id: 1,
     image:
-      "https://img.freepik.com/free-vector/green-banner-with-diagonal-stripes-pattern_1017-28370.jpg?t=st=1735459016~exp=1735462616~hmac=f9fdaf054d24aa6c02d9a6b671e503453b68fe81b1af7d67b477ecbb1d61821e&w=1380",
+      "https://img.freepik.com/free-psd/social-media-banner-instagram-party-welcome-st-patricks-day_621600-17.jpg?t=st=1735677541~exp=1735681141~hmac=e1278f501858286847d2e0a23cee6cdc835161341f5fdd65b09a7da25a2ac510&w=1380",
     label: "First slide label",
     description: "Some representative placeholder content for the first slide.",
   },
   {
     id: 2,
     image:
-      "https://img.freepik.com/free-vector/abstract-fluid-banner-bright-yellow-color_1017-32329.jpg?t=st=1735496358~exp=1735499958~hmac=ce10338ee709d8055d83ed629213a3384c944220503dbaf10cbef0aefead0635&w=1380",
+      "https://img.freepik.com/free-vector/realistic-sports-betting-poster-sport-betting-headline-smartphone-screen-bet-now-button-vector-illustration_1284-77971.jpg?t=st=1735677673~exp=1735681273~hmac=c6cb0902028b61fb8e9ae720a7360c16455ee755b7a12d3f9d962b01fa54b540&w=1380",
     label: "Second slide label",
     description:
       "Some representative placeholder content for the second slide.",
@@ -157,7 +119,7 @@ export const SliderImages = [
   {
     id: 3,
     image:
-      "https://img.freepik.com/free-vector/green-banner-with-diagonal-stripes-pattern_1017-28370.jpg?t=st=1735459016~exp=1735462616~hmac=f9fdaf054d24aa6c02d9a6b671e503453b68fe81b1af7d67b477ecbb1d61821e&w=1380",
+      "https://img.freepik.com/free-vector/league-neon-text-with-ball-skittles_1262-15905.jpg?t=st=1735677717~exp=1735681317~hmac=c087294940b1dc86b318f7b80b779b2c270e464a7b71bb9c3a7f872e0ab1e0b4&w=1380",
     label: "Third slide label",
     description: "Some representative placeholder content for the third slide.",
   },
