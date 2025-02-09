@@ -7,6 +7,7 @@ import Politics from "./pages/Politics/Politics";
 import Sports from "./pages/Sports/Sports";
 import Footer from "./components/Footer/Footer";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/politics" element={<Politics />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/upcoming" element={<Upcoming />} />
