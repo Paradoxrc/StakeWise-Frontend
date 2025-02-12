@@ -8,6 +8,10 @@ import Sports from "./pages/Sports/Sports";
 import Footer from "./components/Footer/Footer";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Login from "./pages/Login";
+import EthereumBetting from "./components/bettingPanel/bettingPanel";
+import Admin from "./Admin/Admin.";
+import Home from "./pages/HomePage/home";
 
 function App() {
   return (
@@ -16,7 +20,11 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+
+          <Route path="/bet" element={<EthereumBetting />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/politics" element={<Politics />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/upcoming" element={<Upcoming />} />
