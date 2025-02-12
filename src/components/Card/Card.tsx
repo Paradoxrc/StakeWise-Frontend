@@ -3,7 +3,6 @@ import React from "react";
 import {
   FaPlus,
   FaMinus,
-  FaArrowUp,
   FaStar,
   FaRegStar,
   FaChevronUp,

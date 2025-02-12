@@ -7,6 +7,7 @@ import Politics from "./pages/Politics/Politics";
 import Sports from "./pages/Sports/Sports";
 import Footer from "./components/Footer/Footer";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/upcoming" element={<Upcoming />} />
           <Route path="/results" element={<Results />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />
       </Router>
