@@ -1,67 +1,87 @@
-import UpcomingEvent01 from "@/assets/images/UpcomingEvent01.png";
-import InterestedBtn from "../interestedBtn/IntererstedBtn";
-import { IoShareSocialSharp } from "react-icons/io5";
+import { Star, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
+interface EventCardProps {
+  title: string;
+  listedDate: string;
+  date: string;
+  venue: string;
+  description: string;
+  image: string;
+  tags: string[];
+  interested: number;
+  isInterested: boolean;
+  onInterestedClick: () => void;
+}
 
-const UpcomingCard = () => {
-    return (
-      <div className="max-w-5xl mx-auto p-[10px] bg-primary border-t-2">
-        <div className="mb-[12px]">
-          <p className="text-sm font-semibold">Listed on : Wednesday, 04 Dec 2024</p>
-          <h2 className="text-2xl font-bold">Australia vs India, 3rd Test at Brisbane</h2>
-        </div>
-        <div className="flex gap-[10px]">
+export function UpcomingCard({
+  title,
+  image,
+  listedDate,
+  date,
+  venue,
+  description,
+  tags,
+  interested,
+  isInterested,
+  onInterestedClick,
+}: EventCardProps) {
+  return (
+    <Card className="bg-[#23232D] border-transparent">
+      <CardContent className="p-6">
+        <div className="grid gap-6 md:grid-cols-[240px,1fr]">
           <img
-            src={UpcomingEvent01}
-            alt="Event"
-            className="max-w-full h-auto rounded-md" // Keep original image size
+            src={image}
+            alt={title}
+            width={240}
+            height={240}
+            className="rounded-lg object-cover w-full h-[240px]"
           />
-          <div className="flex-1">
-            <div className="flex space-x-[5px]">
-            <span className="font-bold min-w-[90px] text-xs flex justify-between"> Event Date<span>:</span></span>
-              <span className="text-xs">December 14–18, 2024</span>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-1">{title}</h3>
+              <div className="text-sm text-gray-400">Listed on: {listedDate}</div>
             </div>
-            <div className="flex mt-2 space-x-[5px]">
-            <span className="font-bold min-w-[90px] text-xs flex justify-between"> Venue<span>:</span></span>
-              <span className="text-xs">The Gabba, Brisbane</span>
+
+            <div className="space-y-2">
+              <div className="grid grid-cols-[80px,1fr] text-sm">
+                <div className="text-gray-400">Event Date</div>
+                <div className="text-white">{date}</div>
+              </div>
+              <div className="grid grid-cols-[80px,1fr] text-sm">
+                <div className="text-gray-400">Venue</div>
+                <div className="text-white">{venue}</div>
+              </div>
+              <div className="grid grid-cols-[80px,1fr] text-sm">
+                <div className="text-gray-400">Description</div>
+                <div className="text-white">{description}</div>
+              </div>
             </div>
-            <div className="flex mt-2 space-x-[5px]">
-            <span className="font-bold min-w-[90px] text-xs flex justify-between"> Occasion<span>:</span></span>
-              <span className="text-xs">
-                3rd Test of the 5-match Border-Gavaskar Trophy (2024–25), part of
-                the ICC World Test Championship (2023–2025).
-              </span>
-            </div>
-            <div className="flex mt-2 space-x-[5px]">
-            <span className="font-bold min-w-[90px] text-xs flex justify-between"> Description<span>:</span></span>
-              <span className="text-xs ">
-                The third Test match between India and Australia in the ongoing
-                Border-Gavaskar Trophy 2024–25 is set to take place from December
-                14 to 18, 2024, at the iconic Gabba in Brisbane. This high-stakes
-                encounter marks the midpoint of the five-match series, which is
-                part of the ICC World Test Championship cycle for 2023–2025. Known
-                for its pace and bounce, the Gabba has historically been a fortress
-                for Australia, boasting an impressive unbeaten streak of 12
-                consecutive Test victories. The pitch is expected to favor fast
-                bowlers, making it a challenging task for batters to adapt.
-              </span>
+
+            <div className="flex items-center justify-between pt-4">
+              <div className="flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <Button key={tag} className="bg-[#333447] text-white hover:bg-[#4A4E68]" variant="secondary" size="sm">
+                    {tag}
+                  </Button>
+                ))}
+              </div>
+              <div className="flex items-center gap-4">
+                <Button variant="secondary" className="text-white gap-2" onClick={onInterestedClick}>
+                  <Star
+                  className={`h-4 w-4 transition-colors duration-300 ${
+                    isInterested ? "fill-yellow-500 text-yellow-500" : "fill-transparent text-yellow-500" }`}/>
+                  Interested {interested}
+                </Button>
+                <Button variant="ghost" size="icon" className="bg-[#333447] text-white hover:bg-[#4A4E68]">
+                  <Share2 className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-end mt-2">
-          <div className="flex gap-4">
-            <span className="px-3 py-1 bg-card text-xs rounded-md">Sports</span>
-            <span className="px-3 py-1 bg-card text-xs rounded-md">Cricket</span>
-          </div>
-          <div className="flex gap-[10px] mt-2">
-            <InterestedBtn />
-            <div className="p-2 rounded-md hover:bg-card transition duration-300">
-              <IoShareSocialSharp size={22} className="my-auto" />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  
-  export default UpcomingCard;
+      </CardContent>
+    </Card>
+  );
+}
