@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-const contractAddress = "0x026cDc6791Bc2E8D98237e9FAB5680A6C0801Bde";
+const contractAddress = "0xbE87fF574659ceafC635A810a46BebEd152b1423";
 const contractABI = [
   {
     inputs: [],
