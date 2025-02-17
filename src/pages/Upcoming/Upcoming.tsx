@@ -17,7 +17,7 @@ export default function Page() {
 
   const filterItems = [
     { title: "Categories", items: [
-      { name: "Politics", count: 23 },
+      { name: "Politics", count: 21 },
       { name: "Sports", count: 32 },
       { name: "Games", count: 12 },
     ] },
