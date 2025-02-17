@@ -1,28 +1,34 @@
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Clock, Trophy, Star, Link2, FileText } from 'lucide-react'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Clock, Trophy, Star, Link2, FileText } from "lucide-react";
 
 interface BetInterfaceProps {
   eventData: {
-    id: string
-    name: string
-    description: string
-    imageURL: string
-    options: string[]
-    startTime: number
-    endTime: number
-    isCompleted: boolean
-    winningOption: string
-    prizePool: string
-  }
-  selectedOption: string
-  setSelectedOption: (option: string) => void
+    id: string;
+    name: string;
+    description: string;
+    imageURL: string;
+    options: string[];
+    startTime: number;
+    endTime: number;
+    isCompleted: boolean;
+    winningOption: string;
+    prizePool: string;
+  };
+  selectedOption: string;
+  setSelectedOption: (option: string) => void;
 }
 
-export default function BetInterface({ eventData, selectedOption, setSelectedOption }: BetInterfaceProps) {
-  const [showMore, setShowMore] = useState(false)
-  const displayedOptions = showMore ? eventData.options : eventData.options.slice(0, 3)
-  const endDate = new Date(eventData.endTime * 1000).toLocaleDateString()
+export default function BetInterface({
+  eventData,
+  selectedOption,
+  setSelectedOption,
+}: BetInterfaceProps) {
+  const [showMore, setShowMore] = useState(false);
+  const displayedOptions = showMore
+    ? eventData.options
+    : eventData.options.slice(0, 3);
+  const endDate = new Date(eventData.endTime * 1000).toLocaleDateString();
 
   return (
     <div className="lg:col-span-2">
@@ -72,8 +78,15 @@ export default function BetInterface({ eventData, selectedOption, setSelectedOpt
             </div>
 
             {displayedOptions.map((option, index) => (
-              <div key={index} className="flex items-center justify-between p-4 bg-[#333447] rounded-lg">
-                <div className="flex items-center gap-4">
+              <div
+                key={index}
+                className="flex items-center justify-between p-4 bg-[#333447] rounded-lg"
+              >
+                <div
+                  className={`flex items-center gap-4 ${
+                    selectedOption === option ? "text-[#00BD58]" : ""
+                  }`}
+                >
                   <span>{option}</span>
                 </div>
                 <div className="flex items-center gap-4">
@@ -109,5 +122,5 @@ export default function BetInterface({ eventData, selectedOption, setSelectedOpt
         </div>
       </div>
     </div>
-  )
+  );
 }

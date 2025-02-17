@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-const contractAddress = "0xbE87fF574659ceafC635A810a46BebEd152b1423";
+const contractAddress = "0x5bA5Bf00D1484aD1f5DBBEA9D252F7fBCEd9799b";
 const contractABI = [
   {
     inputs: [],
@@ -470,7 +470,7 @@ const Admin = () => {
     }
   };
 
-  const handleDeclareWinner = (eventId: number, eventOptions: string[]) => {
+  const handleDeclareWinner = (eventId: number) => {
     setDeclaringWinnerEventId(eventId);
   };
 
@@ -691,9 +691,7 @@ const Admin = () => {
                   ) : (
                     <Button
                       className="mt-4"
-                      onClick={() =>
-                        handleDeclareWinner(Number(event.id), event.options)
-                      }
+                      onClick={() => handleDeclareWinner(Number(event.id))}
                     >
                       {" "}
                       {/* Pass event options */}

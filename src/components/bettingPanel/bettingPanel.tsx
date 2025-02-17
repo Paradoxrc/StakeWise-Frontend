@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 
 // Replace with your actual contract address and ABI
-const contractAddress = "0x3b2F44062a1DD1aebDe25d2AEABf4114A19E9D19";
+const contractAddress = "0x5bA5Bf00D1484aD1f5DBBEA9D252F7fBCEd9799b";
 const contractABI = [
   {
     inputs: [],
