@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 
 // Replace with your actual contract address and ABI
-const contractAddress = "0x5bA5Bf00D1484aD1f5DBBEA9D252F7fBCEd9799b";
+const contractAddress = "0x0cDB5Ee2F84090F84EFD27C4226ccA5f0E57f298";
 const contractABI = [
   {
     inputs: [],
@@ -16,22 +16,28 @@ const contractABI = [
     anonymous: false,
     inputs: [
       {
-        indexed: true,
-        internalType: "address",
-        name: "user",
-        type: "address",
+        indexed: false,
+        internalType: "uint256",
+        name: "eventId",
+        type: "uint256",
       },
       {
         indexed: false,
-        internalType: "enum Betting.Option",
-        name: "option",
-        type: "uint8",
+        internalType: "address",
+        name: "bettor",
+        type: "address",
       },
       {
         indexed: false,
         internalType: "uint256",
         name: "amount",
         type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "option",
+        type: "string",
       },
     ],
     name: "BetPlaced",
@@ -41,19 +47,31 @@ const contractABI = [
     anonymous: false,
     inputs: [
       {
-        indexed: true,
-        internalType: "address",
-        name: "user",
-        type: "address",
+        indexed: false,
+        internalType: "uint256",
+        name: "id",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "name",
+        type: "string",
       },
       {
         indexed: false,
         internalType: "uint256",
-        name: "amount",
+        name: "startTime",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "endTime",
         type: "uint256",
       },
     ],
-    name: "Payout",
+    name: "EventCreated",
     type: "event",
   },
   {
@@ -61,50 +79,100 @@ const contractABI = [
     inputs: [
       {
         indexed: false,
-        internalType: "enum Betting.Option",
+        internalType: "uint256",
+        name: "eventId",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "string",
         name: "winningOption",
-        type: "uint8",
+        type: "string",
       },
     ],
-    name: "WinnerSet",
+    name: "WinnerDeclared",
     type: "event",
   },
   {
     inputs: [],
-    name: "ownerWithdraw",
-    outputs: [],
-    stateMutability: "nonpayable",
+    name: "admin",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
       {
-        internalType: "enum Betting.Option",
-        name: "_option",
-        type: "uint8",
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
       },
     ],
-    name: "placeBet",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
-  },
-  {
-    inputs: [
+    name: "events",
+    outputs: [
       {
-        internalType: "enum Betting.Option",
-        name: "_winningOption",
-        type: "uint8",
+        internalType: "uint256",
+        name: "id",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "description",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "imageURL",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "startTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "isCompleted",
+        type: "bool",
+      },
+      {
+        internalType: "string",
+        name: "winningOption",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "prizePool",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "notificationMessage",
+        type: "string",
       },
     ],
-    name: "setWinningOption",
-    outputs: [],
-    stateMutability: "nonpayable",
+    stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
-    name: "totalPoolSize",
+    name: "nextEventId",
     outputs: [
       {
         internalType: "uint256",
@@ -116,8 +184,171 @@ const contractABI = [
     type: "function",
   },
   {
+    inputs: [
+      {
+        internalType: "string",
+        name: "_name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "_description",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "_imageURL",
+        type: "string",
+      },
+      {
+        internalType: "string[]",
+        name: "_options",
+        type: "string[]",
+      },
+      {
+        internalType: "uint256",
+        name: "_startTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_notificationMessage",
+        type: "string",
+      },
+    ],
+    name: "createEvent",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_option",
+        type: "string",
+      },
+    ],
+    name: "placeBet",
+    outputs: [],
     stateMutability: "payable",
-    type: "receive",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_winningOption",
+        type: "string",
+      },
+    ],
+    name: "declareWinner",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+    ],
+    name: "getEvent",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "description",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "imageURL",
+        type: "string",
+      },
+      {
+        internalType: "string[]",
+        name: "options",
+        type: "string[]",
+      },
+      {
+        internalType: "uint256",
+        name: "startTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "isCompleted",
+        type: "bool",
+      },
+      {
+        internalType: "string",
+        name: "winningOption",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "prizePool",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "notificationMessage",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+    ],
+    name: "getEventOptions",
+    outputs: [
+      {
+        internalType: "string[]",
+        name: "",
+        type: "string[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
   },
 ];
 

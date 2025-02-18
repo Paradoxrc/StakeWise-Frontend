@@ -4,7 +4,7 @@ import Web3 from "web3";
 import BetInterface from "@/components/BetInterface/BetInterface";
 import BetSlip from "@/components/BetSlip/BetSlip";
 
-const contractAddress = "0x5bA5Bf00D1484aD1f5DBBEA9D252F7fBCEd9799b";
+const contractAddress = "0x0cDB5Ee2F84090F84EFD27C4226ccA5f0E57f298";
 const contractABI = [
   {
     inputs: [],
@@ -104,7 +104,6 @@ const contractABI = [
     ],
     stateMutability: "view",
     type: "function",
-    constant: true,
   },
   {
     inputs: [
@@ -161,10 +160,14 @@ const contractABI = [
         name: "prizePool",
         type: "uint256",
       },
+      {
+        internalType: "string",
+        name: "notificationMessage",
+        type: "string",
+      },
     ],
     stateMutability: "view",
     type: "function",
-    constant: true,
   },
   {
     inputs: [],
@@ -178,7 +181,6 @@ const contractABI = [
     ],
     stateMutability: "view",
     type: "function",
-    constant: true,
   },
   {
     inputs: [
@@ -212,6 +214,11 @@ const contractABI = [
         name: "_endTime",
         type: "uint256",
       },
+      {
+        internalType: "string",
+        name: "_notificationMessage",
+        type: "string",
+      },
     ],
     name: "createEvent",
     outputs: [],
@@ -235,7 +242,6 @@ const contractABI = [
     outputs: [],
     stateMutability: "payable",
     type: "function",
-    payable: true,
   },
   {
     inputs: [
@@ -315,10 +321,14 @@ const contractABI = [
         name: "prizePool",
         type: "uint256",
       },
+      {
+        internalType: "string",
+        name: "notificationMessage",
+        type: "string",
+      },
     ],
     stateMutability: "view",
     type: "function",
-    constant: true,
   },
   {
     inputs: [
@@ -338,7 +348,6 @@ const contractABI = [
     ],
     stateMutability: "view",
     type: "function",
-    constant: true,
   },
 ];
 

@@ -3,7 +3,7 @@ import Web3 from "web3";
 import BettingCard from "@/components/BettingCard/BettingCard";
 import Slider from "@/components/Slider/Slider";
 
-const contractAddress = "0x5bA5Bf00D1484aD1f5DBBEA9D252F7fBCEd9799b";
+const contractAddress = "0x0cDB5Ee2F84090F84EFD27C4226ccA5f0E57f298";
 const contractABI = [
   {
     inputs: [],
@@ -44,8 +44,18 @@ const contractABI = [
   {
     anonymous: false,
     inputs: [
-      { indexed: false, internalType: "uint256", name: "id", type: "uint256" },
-      { indexed: false, internalType: "string", name: "name", type: "string" },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "id",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
       {
         indexed: false,
         internalType: "uint256",
@@ -63,32 +73,282 @@ const contractABI = [
     type: "event",
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "eventId",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "winningOption",
+        type: "string",
+      },
+    ],
+    name: "WinnerDeclared",
+    type: "event",
+  },
+  {
     inputs: [],
-    name: "nextEventId",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "admin",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "_eventId", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "events",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "description",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "imageURL",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "startTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "isCompleted",
+        type: "bool",
+      },
+      {
+        internalType: "string",
+        name: "winningOption",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "prizePool",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "notificationMessage",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "nextEventId",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "_name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "_description",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "_imageURL",
+        type: "string",
+      },
+      {
+        internalType: "string[]",
+        name: "_options",
+        type: "string[]",
+      },
+      {
+        internalType: "uint256",
+        name: "_startTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_notificationMessage",
+        type: "string",
+      },
+    ],
+    name: "createEvent",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_option",
+        type: "string",
+      },
+    ],
+    name: "placeBet",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_winningOption",
+        type: "string",
+      },
+    ],
+    name: "declareWinner",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+    ],
     name: "getEvent",
     outputs: [
-      { internalType: "uint256", name: "id", type: "uint256" },
-      { internalType: "string", name: "name", type: "string" },
-      { internalType: "string", name: "description", type: "string" },
-      { internalType: "string", name: "imageURL", type: "string" },
-      { internalType: "string[]", name: "options", type: "string[]" },
-      { internalType: "uint256", name: "startTime", type: "uint256" },
-      { internalType: "uint256", name: "endTime", type: "uint256" },
-      { internalType: "bool", name: "isCompleted", type: "bool" },
-      { internalType: "string", name: "winningOption", type: "string" },
-      { internalType: "uint256", name: "prizePool", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "description",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "imageURL",
+        type: "string",
+      },
+      {
+        internalType: "string[]",
+        name: "options",
+        type: "string[]",
+      },
+      {
+        internalType: "uint256",
+        name: "startTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "isCompleted",
+        type: "bool",
+      },
+      {
+        internalType: "string",
+        name: "winningOption",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "prizePool",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "notificationMessage",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_eventId",
+        type: "uint256",
+      },
+    ],
+    name: "getEventOptions",
+    outputs: [
+      {
+        internalType: "string[]",
+        name: "",
+        type: "string[]",
+      },
     ],
     stateMutability: "view",
     type: "function",
   },
 ];
-
 const Home = () => {
   const [, setWeb3] = useState<Web3 | null>(null);
   const [events, setEvents] = useState<any[]>([]);
